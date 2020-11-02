@@ -23,3 +23,12 @@ Then /I should see all the movies/ do
     step %{I should see "#{movie.title}"}
   end
 end
+
+Then /the director of "(.*)" should be "(.*)"/ do |movie_title, movie_director|
+  within('#title') do
+    step %{I should see "#{movie_title}"}
+  end
+  within('#director') do
+    step %{I should see "#{movie_director}"}
+  end
+end

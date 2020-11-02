@@ -6,6 +6,7 @@ class CreateMovies < ActiveRecord::Migration
       t.text :description
       t.datetime :release_date
       # Add fields that let Rails automatically keep track
+      t.string :director
       # of when movies are added or modified:
       t.timestamps
     end
